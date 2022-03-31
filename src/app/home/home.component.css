@@ -1,0 +1,31 @@
+.jumbotron {
+  padding: 0 !important;
+  display: block !important;
+  margin: auto !important;
+  width: 100% !important;
+  background-size: 100% 100% !important;
+}
+#banner_bg{
+  display: block;
+  margin: auto;
+  width: 100vw;
+  height: 90vh;
+}
+#banner_bg > div {
+  place-items: center;
+  display: grid;
+  justify-content: start;
+  min-height: 88.2vh;
+  align-content: center;
+}
+#banner_bg > div > h1, #banner_bg > div > p {
+  color: white;
+  font-family: century gothic;
+}
+app-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 40px; */
+  color: white;
+}

@@ -1,0 +1,24 @@
+<div class="container" id="store_follet">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" class="form-control" [(ngModel)]="filteredString"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 shadow p-3" *ngFor="let pd of products | filter:filteredString">
+      <div class="card">
+        <img src="https://sell.g2.com/hubfs/iStock-1054858914.jpg" alt="" height="200" width="100%">
+        <div class="card-body">
+          <h5 class="card-title">{{ pd.name }}</h5>
+          <p class="card-tex">Categoria: {{ pd.categories }}</p>
+          <p class="card-text"><small>Precio: <b>$</b>{{ pd.price }}</small></p>
+        </div>
+        <div>
+          <a href="" class="btn btn-primary">Agregar Producto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
