@@ -10,6 +10,8 @@ export class StoreComponent {
 
   products:ListProducts[];
   filteredString:string = '';
+  FilteredPrice:string = '';
+  FilteredCat:string = '';
 
   constructor(private api:ApiService) { }
 

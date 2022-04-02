@@ -1,11 +1,26 @@
 <div class="container" id="store_follet">
   <div class="row">
-    <div class="col-md-12">
-      <input type="text" class="form-control" [(ngModel)]="filteredString"/>
+    <div class="col-md-4">
+      <input type="text" class="form-control"  [(ngModel)]="filteredString" ngDefaultControl placeholder="Search products"/>
+    </div>
+    <div class="col-md-4" [(ngModel)]="FilteredPrice" ngDefaultControl>
+      <label for="">Precios</label>
+      <i class="fa-solid fa-arrow-up" (click)="FilteredPrice='priceAsc'" style="margin-left:10px; cursor: pointer;"></i>
+      <i class="fa-solid fa-arrow-down" (click)="FilteredPrice='priceDesc'" style="margin-left:10px; cursor: pointer;"></i>
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" [(ngModel)]="FilteredCat" ngDefaultControl aria-label="Default select example">
+        <option value="" selected>Categorias</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4 shadow p-3" *ngFor="let pd of products | filter:filteredString">
+    <div class="col-md-4 shadow p-3" *ngFor="let pd of products | filter: filteredString : FilteredPrice : FilteredCat ">
       <div class="card">
         <img src="https://sell.g2.com/hubfs/iStock-1054858914.jpg" alt="" height="200" width="100%">
         <div class="card-body">
